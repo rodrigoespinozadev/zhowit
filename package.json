@@ -1,0 +1,31 @@
+{
+  "name": "zhowit-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "demon": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.421.0",
+    "bcrypt": "^3.0.4",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "express-resize-img": "^1.0.3",
+    "express-validator": "^5.3.0",
+    "express-validator-helper": "^1.0.1",
+    "jsonwebtoken": "^8.1.0",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.4.2",
+    "nodemailer": "^4.6.7",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.18.0",
+    "sequelize-cli": "^5.4.0",
+    "socket.io": "^2.0.4",
+    "uuid": "^3.2.1"
+  }
+}

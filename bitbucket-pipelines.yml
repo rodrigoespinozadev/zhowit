@@ -1,0 +1,26 @@
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy
+          deployment: production
+          script:
+            - pipe: atlassian/ssh-run:0.1.1
+              variables:
+                MODE: "command"
+                SSH_USER: "ubuntu"
+                SERVER: "ec2-54-213-215-144.us-west-2.compute.amazonaws.com"
+                COMMAND: "./deploy_production.sh"
+    test:
+      - step:
+          name: Deploy
+          deployment: test
+          script:
+            - pipe: atlassian/ssh-run:0.1.1
+              variables:
+                MODE: "command"
+                SSH_USER: "ubuntu"
+                SERVER: "ec2-54-213-215-144.us-west-2.compute.amazonaws.com"
+                COMMAND: "./deploy_test.sh"
